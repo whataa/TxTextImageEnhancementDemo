@@ -11,3 +11,5 @@
     ocrSecretKey=
     ```
 1. 运行app
+
+![](doc/img.png)
