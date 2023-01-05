@@ -10,15 +10,16 @@ task clean(type: Delete) {
 }
 
 
-ext.getBuildFlag = { String name, defVal = '' ->
-    new File(project.rootProject.projectDir, 'local.properties').with {
+ext.getBuildFlag = { String name ->
+    def result = ''
+    new File(rootProject.projectDir, 'local.properties').with {
         if (exists()) {
             withInputStream { stream ->
                 Properties props = new Properties()
                 props.load(stream)
-                return props.get(name)
+                result = props.get(name)
             }
         }
     }
-    return defVal
+    return result
 }
