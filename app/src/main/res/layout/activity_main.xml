@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+    <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        <ImageView
+                android:id="@+id/iv_before"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        <TextView
+                android:padding="4dp"
+                android:id="@+id/status"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/purple_500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <CheckBox
+                    android:id="@+id/cb_1"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:text="切边增强" />
+
+            <CheckBox
+                    android:id="@+id/cb_2"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:text="弯曲矫正" />
+
+            <CheckBox
+                    android:id="@+id/cb_208"
+                    android:layout_columnSpan="2"
+                    android:layout_row="0"
+                    android:layout_column="2"
+                    android:text="文字锐化（适合非彩色图片）" />
+
+
+            <!--        -->
+            <CheckBox
+                    android:id="@+id/cb_207"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="省墨模式" />
+
+            <CheckBox
+                    android:id="@+id/cb_205"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:text="灰度模式" />
+
+            <CheckBox
+                    android:id="@+id/cb_202"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:text="黑白模式" />
+
+            <CheckBox
+                    android:id="@+id/cb_204"
+                    android:layout_row="1"
+                    android:layout_column="3"
+                    android:text="提亮模式" />
+
+            <!--        -->
+            <CheckBox
+                    android:id="@+id/cb_301"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:text="301去摩尔纹" />
+
+            <CheckBox
+                    android:id="@+id/cb_302"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:text="302去除阴影" />
+
+            <CheckBox
+                    android:id="@+id/cb_303"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:text="303去除模糊" />
+
+            <CheckBox
+                    android:id="@+id/cb_304"
+                    android:layout_row="2"
+                    android:layout_column="3"
+                    android:text="304去除过曝" />
+
+            <!--        -->
+            <CheckBox
+                    android:id="@+id/cb_300"
+                    android:layout_columnSpan="4"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:text="自动增强（自动从301～304选择任务类型）" />
+        </GridLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btn_ok"
+                android:layout_margin="4dp"
+                android:text="确认"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        <Button
+                android:id="@+id/btn_reset"
+                android:layout_margin="4dp"
+                android:text="重置"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        <Button
+                android:id="@+id/btn_photo"
+                android:layout_margin="4dp"
+                android:text="相册"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
